@@ -151,8 +151,9 @@ public class QueryUtils {
 
                 String titleString =  currentLiveNews.getString("title");
                 String authors = currentLiveNews.getString("description");
+                String image = currentLiveNews.getString("urlToImage");
 
-                LiveNews news = new LiveNews(titleString,authors);
+                LiveNews news = new LiveNews(titleString,authors,image);
                 liveNews.add(news);
 
             }

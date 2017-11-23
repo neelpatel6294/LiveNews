@@ -7,9 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.patel.livenews.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -42,12 +44,16 @@ public class LiveNewsAdapter extends ArrayAdapter<LiveNews> {
 
 
         //finding textview with view id & display current title of news
-        TextView titleView = (TextView)listItemView.findViewById(R.id.titleView);
+        TextView titleView = (TextView) listItemView.findViewById(R.id.titleView);
         titleView.setText(currentLiveNews.getmTitle());
 
         //finding textview with view id & display current author of news
-        TextView authorView = (TextView)listItemView.findViewById(R.id.authorView);
+        TextView authorView = (TextView) listItemView.findViewById(R.id.authorView);
         authorView.setText(currentLiveNews.getmAuthor());
+
+        ImageView imageView = (ImageView) listItemView.findViewById(R.id.imageView);
+        Picasso.with(getContext()).load(currentLiveNews.getmImageView()).into(imageView);
+
 
         return listItemView;
     }

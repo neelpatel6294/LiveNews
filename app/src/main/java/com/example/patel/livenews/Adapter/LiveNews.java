@@ -8,10 +8,12 @@ public class LiveNews {
 
     String mTitle;
     String mAuthor;
+    String mImageView;
 
-    public LiveNews(String mTitle, String mAuthor) {
+    public LiveNews(String mTitle, String mAuthor, String mImageView) {
         this.mTitle = mTitle;
         this.mAuthor = mAuthor;
+        this.mImageView = mImageView;
     }
 
     public String getmTitle() {
@@ -20,5 +22,9 @@ public class LiveNews {
 
     public String getmAuthor() {
         return mAuthor;
+    }
+
+    public String getmImageView() {
+        return mImageView;
     }
 }
